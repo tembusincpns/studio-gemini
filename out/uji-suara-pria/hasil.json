@@ -1,0 +1,27 @@
+[
+ {
+  "id": "charon",
+  "ok": true,
+  "file": "charon.wav"
+ },
+ {
+  "id": "orus",
+  "ok": true,
+  "file": "orus.wav"
+ },
+ {
+  "id": "achird",
+  "ok": true,
+  "file": "achird.wav"
+ },
+ {
+  "id": "zubenelgenubi",
+  "ok": true,
+  "file": "zubenelgenubi.wav"
+ },
+ {
+  "id": "iapetus",
+  "ok": true,
+  "file": "iapetus.wav"
+ }
+]
