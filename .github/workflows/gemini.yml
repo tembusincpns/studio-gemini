@@ -1,0 +1,33 @@
+name: gemini
+on:
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: "ID job (nama folder hasil)"
+        required: true
+      job:
+        description: "JSON daftar item"
+        required: true
+permissions:
+  contents: write
+concurrency: gemini
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Buat suara dan foto
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          JOB: ${{ inputs.job }}
+          JOB_ID: ${{ inputs.job_id }}
+        run: python3 gemini.py
+      - name: Simpan hasil ke repo
+        run: |
+          git config user.name "studio-gemini"
+          git config user.email "actions@users.noreply.github.com"
+          git add out
+          git commit -m "hasil ${{ inputs.job_id }}" || echo "tidak ada perubahan"
+          git pull --rebase
+          git push
