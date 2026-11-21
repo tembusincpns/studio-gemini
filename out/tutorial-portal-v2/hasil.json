@@ -1,0 +1,22 @@
+[
+ {
+  "id": "vo1",
+  "ok": true,
+  "file": "vo1.wav"
+ },
+ {
+  "id": "vo2",
+  "ok": true,
+  "file": "vo2.wav"
+ },
+ {
+  "id": "vo3",
+  "ok": true,
+  "file": "vo3.wav"
+ },
+ {
+  "id": "vo4",
+  "ok": true,
+  "file": "vo4.wav"
+ }
+]
